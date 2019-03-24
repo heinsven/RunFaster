@@ -6,16 +6,16 @@
 // 路口信息：#(结点id,道路id,道路id,道路id,道路id)
 //
 
-#include "road_message.cpp"
+#include "road.cpp"
 
 
 class map_structure {
 private:
     string cross_ID;
     string road_ID;
-    map_structure *west, *east, *north, *south;
+    road *west, *east, *north, *south;
 public:
-    map_structure(string cross_ID) : cross_ID(cross_ID), west(nullptr), east(nullptr), north(nullptr),
+    map_structure(string cross_ID,int road1,int road2,int road3,int road4) : cross_ID(cross_ID), west(nullptr), east(nullptr), north(nullptr),
                                      south(nullptr) {}
 /*    search_road(string cross1,string cross2,road_message road1){
         if(road1.begin_ID==cross_ID1&&road2.end_ID==cross_ID2)
